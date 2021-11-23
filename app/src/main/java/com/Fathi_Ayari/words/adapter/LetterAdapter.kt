@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
+import com.Fathi_Ayari.WordListFragment
 import com.Fathi_Ayari.words.DetailActivity
+import com.Fathi_Ayari.words.DetailActivity.Companion.LETTER
 import com.Fathi_Ayari.words.MainActivity
 import com.Fathi_Ayari.words.R
 
@@ -52,7 +54,7 @@ class LetterAdapter :
         holder.button.setOnClickListener {
             val context = holder.view.context
             val intent = Intent(context, DetailActivity::class.java)
-            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
+            intent.putExtra(WordListFragment.LETTER, holder.button.text.toString())
             context.startActivity(intent)
         }
 
